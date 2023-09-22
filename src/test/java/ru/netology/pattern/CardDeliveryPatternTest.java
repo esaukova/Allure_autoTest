@@ -58,7 +58,7 @@ public class CardDeliveryPatternTest {
         driver.findElement(By.cssSelector("[class='button__content']")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(".notification__content"))));
-        String text = driver.findElement(By.cssSelector("[data-test-id='success-notification'] .notification__content")).getText();
+        String text = driver.findElement(By.cssSelector("[data-test-id='success-notification'] .notification__contentt")).getText();
         assertEquals("Встреча успешно запланирована на " + firstMeetingDate, text.trim());
         driver.findElement(By.cssSelector("[data-test-id=date] input")).sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         driver.findElement(By.cssSelector("[data-test-id=date] input")).sendKeys(secondMeetingDate);
